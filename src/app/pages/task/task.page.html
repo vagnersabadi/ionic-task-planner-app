@@ -13,7 +13,8 @@
   <ion-toolbar color="primary" class="user-details">
     <ion-item class="transparent" lines="none">
       <ion-avatar slot="start">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        <img
+          src="https://avatars0.githubusercontent.com/u/12532889?s=460&u=758efee3e15b5e61f684a351fc82048426228f11&v=4">
       </ion-avatar>
       <ion-label class="names-occupation">
         <h3>Vagner Sabadi</h3>
@@ -65,33 +66,30 @@
     <ion-grid>
 
       <ion-row>
-        <ion-col size="6">
+        <ion-col size="6" *ngFor="let project of projects">
 
-          <ion-card color="success" class="card-projects">
+          <ion-card [color]="project.color" class="card-projects">
             <div class="radial-progress" data-progress="0">
               <div class="circle">
-                <div class="mask full" [style.transform]="'rotate(' + 40 * 100 + 'deg)'">
-                  <div class="fill" [style.transform]="'rotate(' + 40 * 100 + 'deg)'"></div>
+                <div class="mask full" [style.transform]="'rotate(' + project.percentage * 100 + 'deg)'">
+                  <div class="fill" [style.transform]="'rotate(' + project.percentage * 100 + 'deg)'"></div>
                 </div>
                 <div class="mask half">
-                  <div class="fill" [style.transform]="'rotate(' + 80 * 100 + 'deg)'"></div>
-                  <div class="fill fix" [style.transform]="'rotate(' + 80 * 100 + 'deg)'"></div>
+                  <div class="fill" [style.transform]="'rotate(' + project.percentage * 100 + 'deg)'"></div>
+                  <div class="fill fix" [style.transform]="'rotate(' + project.percentage * 100 + 'deg)'"></div>
                 </div>
               </div>
-              <div class="inset" [style.background-color]="'#309397'">
-                <div class="percentage"> 20%  </div>
+              <div class="inset" [style.background-color]="project.colorHex">
+                <div class="percentage"> {{ project.percentage }}% </div>
               </div>
             </div>
 
-
-            <!-- <ion-item lines="none" class="transparent">
+            <ion-card-content>
               <ion-label>
-                <ion-text color="light">
-                  <h5>MEdical</h5>
-                  <p>9 hurs</p>
-                </ion-text>
+                <h3> {{ project.title }} </h3>
+                <p> {{ project.subTitle }} </p>
               </ion-label>
-            </ion-item> -->
+            </ion-card-content>
           </ion-card>
 
         </ion-col>

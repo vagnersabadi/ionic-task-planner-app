@@ -67,10 +67,16 @@ ion-header {
 
 .card-projects {
     border-radius: 40px;
-    // padding: 50px;
 
+    h3 {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    p {
+        color: #ffffff94;
+    }
 }
-
 
 .radial-progress {
     $circle-size: 100px;
@@ -79,7 +85,7 @@ ion-header {
     $inset-size: 80px;
     $inset-color: #fff;
     $transition-length: 1s;
-    $percentage-color: tomato;
+    $percentage-color: #fff;
     $percentage-font-size: 16px;
 
     margin: 16px;
@@ -89,53 +95,52 @@ ion-header {
     border-radius: 50%;
 
     .circle {
-      .fill,
-      .mask,
-      .shadow {
-        width: $circle-size;
-        height: $circle-size;
-        position: absolute;
-        border-radius: 50%;
-      }
-
-
-      .fill,
-      .mask {
-        -webkit-backface-visibility: hidden;
-        transition: -webkit-transform $transition-length;
-        transition: -ms-transform $transition-length;
-        transition: transform $transition-length;
-        border-radius: 50%;
-      }
-
-      .mask {
-        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
-
-        .fill {
-          clip: rect(0px, $circle-size/2, $circle-size, 0px);
-          background-color: $circle-color;
+        .fill,
+        .mask,
+        .shadow {
+            width: $circle-size;
+            height: $circle-size;
+            position: absolute;
+            border-radius: 50%;
         }
-      }
+
+        .fill,
+        .mask {
+            -webkit-backface-visibility: hidden;
+            transition: -webkit-transform $transition-length;
+            transition: -ms-transform $transition-length;
+            transition: transform $transition-length;
+            border-radius: 50%;
+        }
+
+        .mask {
+            clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+
+            .fill {
+                clip: rect(0px, $circle-size/2, $circle-size, 0px);
+                background-color: $circle-color;
+            }
+        }
     }
 
     .inset {
-      width: $inset-size;
-      height: $inset-size;
-      position: absolute;
-      margin-left: ($circle-size - $inset-size)/2;
-      margin-top: ($circle-size - $inset-size)/2;
-    //   background-color: $inset-color;
-      border-radius: 50%;
-
-      .percentage {
-        width: 100%;
+        width: $inset-size;
+        height: $inset-size;
         position: absolute;
-        top: ($inset-size - $percentage-font-size) / 2;
-        line-height: 1;
-        text-align: center;
-        font-weight: 500;
-        color: $percentage-color;
-        font-size: $percentage-font-size;
-      }
+        margin-left: ($circle-size - $inset-size)/2;
+        margin-top: ($circle-size - $inset-size)/2;
+        //   background-color: $inset-color;
+        border-radius: 50%;
+
+        .percentage {
+            width: 100%;
+            position: absolute;
+            top: ($inset-size - $percentage-font-size) / 2;
+            line-height: 1;
+            text-align: center;
+            font-weight: 500;
+            color: $percentage-color;
+            font-size: $percentage-font-size;
+        }
     }
-  }
+}
