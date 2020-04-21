@@ -1,0 +1,47 @@
+ion-header {
+    background: var(--ion-color-secondary);
+    z-index: 0;
+    .task-details {
+        padding: 40px 0px 40px 0px;
+        border-radius: 0px 0px 50px 50px;
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+}
+
+.form-inputs {
+    .btn-schendule {
+        --box-shadow: none;
+        ion-icon {
+            font-size: 16px;
+        }
+    }
+
+    ion-label {
+        color: var(--ion-color-medium-shade);
+    }
+}
+
+.icon-more {
+    align-self: flex-end;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.group-badge {
+    ion-badge {
+        padding: 14px;
+        border-radius: 24px;
+        margin: 4px;
+        color: var(--ion-color-dark-blue-tint);
+        font-size: 12px;
+    }
+}
+
+.btn-create {
+    --color: #fff !important;
+    --background: var(--ion-color-blue);
+}

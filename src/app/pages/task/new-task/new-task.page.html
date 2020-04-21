@@ -1,9 +1,102 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>new-task</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary" class="task-details">
+
+    <ion-item lines="none" class="transparent">
+      <h2 class="title">
+        Create new task
+      </h2>
+    </ion-item>
+
+    <ion-grid class="form-inputs">
+      <ion-row>
+        <ion-col>
+          <ion-item lines="inset" class="transparent ion-padding-end">
+            <ion-label position="stacked" color="medium">Title</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="10">
+          <ion-item lines="inset" class="transparent">
+            <ion-label position="stacked" color="medium">Date</ion-label>
+            <ion-input></ion-input>
+            <ion-icon slot="end" name="chevron-down-outline" class="icon-more"></ion-icon>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-fab-button color="success" class="btn-schendule">
+            <ion-icon name="calendar"></ion-icon>
+          </ion-fab-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="secondary">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset" class="transparent">
+          <ion-label position="stacked" color="medium">Start time</ion-label>
+          <ion-input></ion-input>
+          <ion-icon slot="end" name="chevron-down-outline" class="icon-more"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="inset" class="transparent">
+          <ion-label position="stacked" color="medium">End time</ion-label>
+          <ion-input></ion-input>
+          <ion-icon slot="end" name="chevron-down-outline" class="icon-more"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset" class="transparent">
+          <ion-label position="stacked" color="medium">Description</ion-label>
+          <ion-textarea rows="3" cols="20"></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="transparent">
+          <ion-label color="medium">
+            <h3> Category</h3>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="group-badge">
+      <ion-badge color="danger"> SPORT APP</ion-badge>
+      <ion-badge color="dark"> MEDICAL APP </ion-badge>
+      <ion-badge color="dark"> RENT APP </ion-badge>
+      <ion-badge color="dark"> BANKING APP </ion-badge>
+      <ion-badge color="dark"> GAMING PLATFORM APP </ion-badge>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+  <ion-button expand="full" shape="round" class="ion-margin btn-create" strong>
+      Create Task
+  </ion-button>
+
 
 </ion-content>
