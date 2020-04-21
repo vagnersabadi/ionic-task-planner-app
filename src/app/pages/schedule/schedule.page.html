@@ -1,9 +1,93 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>schedule</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="secondary">
+  <ion-item lines="none" class="transparent">
+    <ion-label>
+      <h2 class="title">
+        Today
+      </h2>
+      <p>
+        Productive Day, Vagner
+      </p>
+    </ion-label>
+    <ion-button slot="end" shape="round" color="success" class="ion-padding" (click)="create()">Add task</ion-button>
+  </ion-item>
+
+
+  <ion-item lines="none" class="transparent">
+    <ion-label>
+      <h3 class="month">
+        April, 2020
+      </h3>
+    </ion-label>
+  </ion-item>
+
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name day-san">San</p>
+        <p class="day day-san">5</p>
+      </ion-col>
+
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name">Mon</p>
+        <p class="day">6</p>
+      </ion-col>
+
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name">Tue</p>
+        <p class="day">7</p>
+      </ion-col>
+
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name">Wed</p>
+        <p class="day">8</p>
+      </ion-col>
+
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name">Thu</p>
+        <p class="day">9</p>
+      </ion-col>
+
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name">Fri</p>
+        <p class="day">10</p>
+      </ion-col>
+
+      <ion-col size="1.7" class="day-week">
+        <p class="day-name">Sat</p>
+        <p class="day">11</p>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngFor="let hour of [1,2,3,4,5,6,7,8,9,10,11,12]">
+      <ion-col size="2" class="hours">
+        <p>{{ hour }} AM</p>
+      </ion-col>
+      <ion-col size="10" *ngFor="let task of tasks">
+        <div class="item-calendar" *ngIf="task.hour === hour">
+          <p class="item-title">
+            {{ task.title}}
+          </p>
+          <p class="item-description">
+            {{ task.title}}
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
 
 </ion-content>

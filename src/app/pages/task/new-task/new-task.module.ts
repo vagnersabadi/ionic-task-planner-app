@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NewTaskPageRoutingModule } from './new-task-routing.module';
 
 import { NewTaskPage } from './new-task.page';
 
@@ -13,8 +12,9 @@ import { NewTaskPage } from './new-task.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    NewTaskPageRoutingModule
   ],
-  declarations: [NewTaskPage]
+  declarations: [NewTaskPage],
+  entryComponents: [NewTaskPage]
+
 })
 export class NewTaskPageModule {}

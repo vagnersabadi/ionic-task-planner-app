@@ -1,0 +1,43 @@
+ion-header {
+    background: var(--ion-color-secondary);
+    z-index: 0;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.day-week {
+    text-align: center;
+
+    .day-name {
+        color: var(--ion-color-medium);
+    }
+
+    .day {
+        font-weight: 600;
+    }
+}
+.month {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.day-san {
+    color: var(--ion-color-danger) !important;
+}
+
+.item-calendar {
+    padding: 8px;
+    background: aquamarine;
+    border-radius: 30px;
+}
+
+.hours {
+    text-align: center;
+    p {
+        font-size: 12px;
+        color: var(--ion-color-medium);
+    }
+}
