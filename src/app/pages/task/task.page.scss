@@ -1,0 +1,141 @@
+ion-header {
+    background: var(--ion-color-secondary);
+    z-index: 0;
+    .user-details {
+        padding: 40px 0px 40px 0px;
+        border-radius: 0px 0px 50px 50px;
+        ion-avatar {
+            margin-left: 25px;
+            height: 60px;
+            width: 60px;
+        }
+
+        .names-occupation {
+            h3 {
+                font-weight: 600;
+                font-size: 18px;
+                margin-bottom: 4px;
+                color: var(--ion-color-dark-blue);
+            }
+            p {
+                font-size: 14px;
+                color: var(--ion-color-medium-shade);
+            }
+        }
+    }
+}
+
+.title-list {
+    margin-top: 16px;
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--ion-color-dark-blue);
+    }
+
+    .btn-schendule {
+        --box-shadow: none;
+        ion-icon {
+            font-size: 16px;
+        }
+    }
+}
+
+.list-tasks {
+    background: transparent;
+
+    .task {
+        .btn-fab-list {
+            --box-shadow: none;
+            ion-icon {
+                font-size: 16px;
+            }
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+        p {
+            color: var(--ion-color-medium-shade);
+        }
+    }
+}
+
+.list-projects {
+    background: transparent;
+}
+
+.card-projects {
+    border-radius: 40px;
+    // padding: 50px;
+
+}
+
+
+.radial-progress {
+    $circle-size: 100px;
+    $circle-background: #d6dadc50;
+    $circle-color: white;
+    $inset-size: 80px;
+    $inset-color: #fff;
+    $transition-length: 1s;
+    $percentage-color: tomato;
+    $percentage-font-size: 16px;
+
+    margin: 16px;
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $circle-background;
+    border-radius: 50%;
+
+    .circle {
+      .fill,
+      .mask,
+      .shadow {
+        width: $circle-size;
+        height: $circle-size;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+
+      .fill,
+      .mask {
+        -webkit-backface-visibility: hidden;
+        transition: -webkit-transform $transition-length;
+        transition: -ms-transform $transition-length;
+        transition: transform $transition-length;
+        border-radius: 50%;
+      }
+
+      .mask {
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+
+        .fill {
+          clip: rect(0px, $circle-size/2, $circle-size, 0px);
+          background-color: $circle-color;
+        }
+      }
+    }
+
+    .inset {
+      width: $inset-size;
+      height: $inset-size;
+      position: absolute;
+      margin-left: ($circle-size - $inset-size)/2;
+      margin-top: ($circle-size - $inset-size)/2;
+    //   background-color: $inset-color;
+      border-radius: 50%;
+
+      .percentage {
+        width: 100%;
+        position: absolute;
+        top: ($inset-size - $percentage-font-size) / 2;
+        line-height: 1;
+        text-align: center;
+        font-weight: 500;
+        color: $percentage-color;
+        font-size: $percentage-font-size;
+      }
+    }
+  }

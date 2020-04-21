@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary" class="user-details">
+    <ion-item class="transparent" lines="none">
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label class="names-occupation">
+        <h3>Vagner Sabadi</h3>
+        <p> Mobile Developer</p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+
+
+  <ion-list class="list-tasks">
+    <ion-item lines="none" class="transparent title-list">
+      <ion-label>
+        <h2>
+          My tasks
+        </h2>
+      </ion-label>
+      <ion-fab-button slot="end" color="success" class="btn-schendule">
+        <ion-icon name="calendar"></ion-icon>
+      </ion-fab-button>
+    </ion-item>
+
+    <ion-item lines="none" class="transparent task" *ngFor="let task of tasks">
+      <ion-fab-button slot="start" [color]="task.color" size="small" class="btn-fab-list">
+        <ion-icon [name]="task.icon"></ion-icon>
+      </ion-fab-button>
+
+      <ion-label>
+        <h3> {{ task.title }} </h3>
+        <p> {{ task.count_now }} task now &#8226; {{ task.count_started }} started</p>
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list class="list-projects">
+    <ion-item lines="none" class="transparent title-list">
+      <ion-label>
+        <h2>
+          Active Projects
+        </h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size="6">
+
+          <ion-card color="success" class="card-projects">
+            <div class="radial-progress" data-progress="0">
+              <div class="circle">
+                <div class="mask full" [style.transform]="'rotate(' + 40 * 100 + 'deg)'">
+                  <div class="fill" [style.transform]="'rotate(' + 40 * 100 + 'deg)'"></div>
+                </div>
+                <div class="mask half">
+                  <div class="fill" [style.transform]="'rotate(' + 80 * 100 + 'deg)'"></div>
+                  <div class="fill fix" [style.transform]="'rotate(' + 80 * 100 + 'deg)'"></div>
+                </div>
+              </div>
+              <div class="inset" [style.background-color]="'#309397'">
+                <div class="percentage"> 20%  </div>
+              </div>
+            </div>
+
+
+            <!-- <ion-item lines="none" class="transparent">
+              <ion-label>
+                <ion-text color="light">
+                  <h5>MEdical</h5>
+                  <p>9 hurs</p>
+                </ion-text>
+              </ion-label>
+            </ion-item> -->
+          </ion-card>
+
+        </ion-col>
+        <ion-col size="6">
+
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+
+  </ion-list>
+
+
+</ion-content>
