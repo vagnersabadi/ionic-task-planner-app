@@ -10,10 +10,6 @@ const routes: Routes = [
   {
     path: 'task',
     loadChildren: () => import('./pages/task/task.module').then( m => m.TaskPageModule)
-  },
-  {
-    path: 'schedule',
-    loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
   }
 
 ];

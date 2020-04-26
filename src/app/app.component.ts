@@ -16,11 +16,6 @@ export class AppComponent implements OnInit {
       title: 'Task',
       url: '/task',
       icon: 'mail'
-    },
-    {
-      title: 'New task',
-      url: '/task/new-task',
-      icon: 'bookmark'
     }
 
   ];

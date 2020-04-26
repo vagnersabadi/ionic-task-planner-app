@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SchedulePageRoutingModule } from './schedule-routing.module';
 
 import { SchedulePage } from './schedule.page';
 import { NewTaskPageModule } from '../task/new-task/new-task.module';
@@ -14,9 +13,10 @@ import { NewTaskPageModule } from '../task/new-task/new-task.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SchedulePageRoutingModule,
     NewTaskPageModule
   ],
-  declarations: [SchedulePage]
+  declarations: [SchedulePage],
+  entryComponents: [SchedulePage]
+
 })
 export class SchedulePageModule {}

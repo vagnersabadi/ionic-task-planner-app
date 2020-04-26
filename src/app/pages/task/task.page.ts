@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SchedulePage } from '../schedule/schedule.page';
+import { ModalController } from '@ionic/angular';
 
 export interface Task {
   title: string;
@@ -53,9 +55,19 @@ export class TaskPage implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(
+    private modalController: ModalController
+  ) { }
 
   ngOnInit() {
+  }
+
+
+  async openSchebdule() {
+    const modal = await this.modalController.create({
+      component: SchedulePage
+    });
+    return await modal.present();
   }
 
 }
