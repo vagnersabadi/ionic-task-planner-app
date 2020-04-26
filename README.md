@@ -7,11 +7,8 @@ This app is static. I mean, This is a UI design. No backend.
 
   HomePage              |   Calendar Page | Task Create Page
 :-------------------------:|:-------------------------:|:---------------------:
-![](https://github.com/TheAlphaApp/flutter-task-planner-app/blob/master/screenshots/screenshot1.jpg?raw=true)|![](https://github.com/TheAlphaApp/flutter-task-planner-app/blob/master/screenshots/screenshot2.jpg?raw=true)|![](https://github.com/TheAlphaApp/flutter-task-planner-app/blob/master/screenshots/screenshot3.jpg?raw=true)
+![](https://github.com/vagnersabadi/ionic-task/blob/master/prints/page-task.PNG?raw=true)|![](https://github.com/vagnersabadi/ionic-task/blob/master/prints/page-schendule.PNG?raw=true)|![](https://github.com/vagnersabadi/ionic-task/blob/master/prints/new-task.PNG?raw=true)
 
 
-## Pull Requests
-
-I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request.
 
 
