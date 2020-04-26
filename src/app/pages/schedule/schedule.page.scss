@@ -29,15 +29,27 @@ ion-header {
 }
 
 .item-calendar {
-    padding: 8px;
+    padding: 8px 24px 8px 24px;
     background: aquamarine;
     border-radius: 30px;
+    margin-left: 20%;
+    margin-right: -20%;
 }
 
 .hours {
     text-align: center;
+    position: absolute;
     p {
         font-size: 12px;
         color: var(--ion-color-medium);
     }
+}
+
+.item-title {
+    font-weight: 600;
+}
+
+.item-description{
+    font-size: 14px;
+    color: #4d4d52;
 }

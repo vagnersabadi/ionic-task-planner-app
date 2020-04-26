@@ -76,12 +76,12 @@
         <p>{{ hour }} AM</p>
       </ion-col>
       <ion-col size="10" *ngFor="let task of tasks">
-        <div class="item-calendar" *ngIf="task.hour === hour">
+        <div class="item-calendar" *ngIf="task.hour === hour" [style.background]="task.colorHex">
           <p class="item-title">
             {{ task.title}}
           </p>
           <p class="item-description">
-            {{ task.title}}
+            {{ task.description}}
           </p>
         </div>
       </ion-col>
