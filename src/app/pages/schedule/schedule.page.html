@@ -14,9 +14,9 @@
       <h2 class="title">
         Today
       </h2>
-      <p>
+      <span>
         Productive Day, Vagner
-      </p>
+      </span>
     </ion-label>
     <ion-button slot="end" shape="round" color="success" class="ion-padding" (click)="create()">Add task</ion-button>
   </ion-item>
@@ -35,54 +35,54 @@
 
     <ion-row>
       <ion-col size="1.7" class="day-week">
-        <p class="day-name day-san">San</p>
-        <p class="day day-san">5</p>
+        <span class="day-name day-san">San</span>
+        <span class="day day-san">5</span>
       </ion-col>
 
       <ion-col size="1.7" class="day-week">
-        <p class="day-name">Mon</p>
-        <p class="day">6</p>
+        <span class="day-name">Mon</span>
+        <span class="day">6</span>
       </ion-col>
 
       <ion-col size="1.7" class="day-week">
-        <p class="day-name">Tue</p>
-        <p class="day">7</p>
+        <span class="day-name">Tue</span>
+        <span class="day">7</span>
       </ion-col>
 
       <ion-col size="1.7" class="day-week">
-        <p class="day-name">Wed</p>
-        <p class="day">8</p>
+        <span class="day-name">Wed</span>
+        <span class="day">8</span>
       </ion-col>
 
       <ion-col size="1.7" class="day-week">
-        <p class="day-name">Thu</p>
-        <p class="day">9</p>
+        <span class="day-name">Thu</span>
+        <span class="day">9</span>
       </ion-col>
 
       <ion-col size="1.7" class="day-week">
-        <p class="day-name">Fri</p>
-        <p class="day">10</p>
+        <span class="day-name">Fri</span>
+        <span class="day">10</span>
       </ion-col>
 
       <ion-col size="1.7" class="day-week">
-        <p class="day-name">Sat</p>
-        <p class="day">11</p>
+        <span class="day-name">Sat</span>
+        <span class="day">11</span>
       </ion-col>
     </ion-row>
 
 
     <ion-row *ngFor="let hour of [1,2,3,4,5,6,7,8,9,10,11,12]">
       <ion-col size="2" class="hours">
-        <p>{{ hour }} AM</p>
+        <span>{{ hour }} AM</span>
       </ion-col>
       <ion-col size="10" *ngFor="let task of tasks">
         <div class="item-calendar" *ngIf="task.hour === hour" [style.background]="task.colorHex">
-          <p class="item-title">
+          <span class="item-title">
             {{ task.title}}
-          </p>
-          <p class="item-description">
+          </span>
+          <span class="item-description">
             {{ task.description}}
-          </p>
+          </span>
         </div>
       </ion-col>
     </ion-row>
